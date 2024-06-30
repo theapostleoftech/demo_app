@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'compressor',
     'app.apps.AppConfig',
 ]
 
@@ -120,6 +121,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+COMPRESS_ROOT = BASE_DIR / 'build'
+
+COMPRESS_ENABLED = True
+
+STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
+
 # STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
@@ -135,3 +142,5 @@ STORAGES = {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
+
+# NPM_BIN_PATH = '/usr/local/bin/npm'
