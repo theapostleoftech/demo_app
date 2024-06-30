@@ -143,4 +143,6 @@ STORAGES = {
     },
 }
 
+COMPRESS_OFFLINE = True
+
 # NPM_BIN_PATH = '/usr/local/bin/npm'
