@@ -7,7 +7,9 @@
   },
   "scripts": {
     "heroku-prebuild": "cd demo_app && npm ci --include=dev",
-    "heroku-postbuild": "cd demo_app && npm run build"
+    "heroku-postbuild": "cd demo_app && npm run build",
+    "build": "npx tailwindcss -i ./static/src/input.css -o ./static/src/styles.css",
+    "watch": "npx tailwindcss -i ./static/src/input.css -o ./static/src/styles.css --watch"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
