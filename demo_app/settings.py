@@ -121,7 +121,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-COMPRESS_ROOT = BASE_DIR / 'build'
+COMPRESS_ROOT = BASE_DIR / 'static'
 
 COMPRESS_ENABLED = True
 
