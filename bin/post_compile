@@ -1,3 +1,2 @@
 python manage.py collectstatic --noinput --clear --no-post-process
-python manage.py compress --force
 python manage.py collectstatic --noinput
