@@ -126,9 +126,9 @@ COMPRESS_ENABLED = env.bool('COMPRESS_ENABLED', default=True)
 
 COMPRESS_OFFLINE = env.bool('COMPRESS_OFFLINE', default=True)
 
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",
-# ]
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
@@ -149,11 +149,3 @@ STORAGES = {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
-
-# COMPRESS_OFFLINE = False
-
-# NPM_BIN_PATH = '/usr/local/bin/npm'
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/src'),
-]

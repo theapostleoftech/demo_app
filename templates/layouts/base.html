@@ -1,4 +1,4 @@
-{% load compress %}
+{#{% load compress %}#}
 {% load static %}
 
 <!DOCTYPE html>
@@ -10,9 +10,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{% block title %}{% endblock title %} : Demo Application</title>
 
-	{% compress css %}
+{#	{% compress css %}#}
 		<link rel="stylesheet" href="{% static 'src/styles.css' %}">
-	{% endcompress %}
+{#	{% endcompress %}#}
 
 </head>
 
