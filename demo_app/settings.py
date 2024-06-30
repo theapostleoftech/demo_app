@@ -26,7 +26,7 @@ SECRET_KEY = env('DJANGO_SECRET_KEY', default=get_random_secret_key())
 DEBUG = env.bool('DEBUG', default=True)
 # DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['uloahia-demo-c7c6bc7d2397.herokuapp.com', '127.0.0.1', 'localhost', '0.0.0.0']
 # ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
 # Application definition
