@@ -134,7 +134,7 @@ STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
 # STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = BASE_DIR / 'static'
 
 COMPRESS_ROOT = STATIC_ROOT
 
