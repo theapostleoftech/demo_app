@@ -128,7 +128,11 @@ COMPRESS_ENABLED = env.bool('COMPRESS_ENABLED', default=True)
 
 COMPRESS_OFFLINE = env.bool('COMPRESS_OFFLINE', default=True)
 
-STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+# STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
 # STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
