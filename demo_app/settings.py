@@ -123,7 +123,10 @@ STATIC_URL = 'static/'
 
 COMPRESS_ROOT = BASE_DIR / 'static'
 
-COMPRESS_ENABLED = True
+# COMPRESS_ENABLED = True
+COMPRESS_ENABLED = env.bool('COMPRESS_ENABLED', default=True)
+
+COMPRESS_OFFLINE = env.bool('COMPRESS_OFFLINE', default=True)
 
 STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
@@ -143,6 +146,6 @@ STORAGES = {
     },
 }
 
-COMPRESS_OFFLINE = True
+# COMPRESS_OFFLINE = False
 
 # NPM_BIN_PATH = '/usr/local/bin/npm'
