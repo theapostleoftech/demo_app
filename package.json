@@ -1,20 +1,14 @@
 {
-  "name": "demo_app",
-  "version": "3.6.0",
-  "description": "",
+  "name": "demo_ap",
+  "description": "Run the tailwind build step before django's collectstatic",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
-    "start": "npm run dev",
-    "build": "npm run build:clean && npm run build:tailwind",
-    "build:clean": "rimraf ./build/static_src/styles",
-    "build:tailwind": "cross-env NODE_ENV=production tailwindcss --postcss -i ./build/static_src/styles/input.css -o ../static_src/styles/styles.css --minify",
-    "dev": "cross-env NODE_ENV=development tailwindcss --postcss -i ./build/static_src/styles/input.css -o ../static_src/styles/styles.css -w",
-    "tailwindcss": "node ./node_modules/tailwindcss/lib/cli.js",
     "heroku-prebuild": "cd demo_app && npm ci --include=dev",
     "heroku-postbuild": "cd demo_app && npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.3",
@@ -31,11 +25,5 @@
   },
   "dependencies": {
     "flowbite": "^2.4.1"
-  },
-  "engines": {
-    "node": "14.x"
-  },
-  "cacheDirectories": [
-    "theme/static_src/node_modules"
-  ]
+  }
 }
